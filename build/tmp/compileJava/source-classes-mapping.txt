@@ -1,4 +1,10 @@
+gui/configuration/Settings.java
+ gui.configuration.Settings
 graph/Graph.java
  graph.Graph
+gui/configuration/Language.java
+ gui.configuration.Language
 gui/MainWindow.java
  gui.MainWindow
+gui/graphwindow/GraphWindow.java
+ gui.graphwindow.GraphWindow
