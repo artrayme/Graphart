@@ -29,10 +29,12 @@ public class MainWindow extends Application {
         Tab secondTab = new Tab("note" + tabsCount++);
         secondTab.setContent(new GraphWindow());
         tabPane.getTabs().addAll(firstTab, secondTab);
+//        tabPane.getStyleClass().clear();
+
         root.getChildren().addAll(menuBar, tabPane);
         VBox.setVgrow(tabPane, Priority.ALWAYS);
         Scene scene = new Scene(root, WINDOW_WIDTH, WINDOW_HEIGHT);
-        scene.getStylesheets().add("mainwindow/default.css");
+        scene.getStylesheets().add("mainwindow/mainwindowdefault.css");
         stage.setScene(scene);
         stage.show();
     }
@@ -42,9 +44,7 @@ public class MainWindow extends Application {
         Menu settings = initMenuBarSettingsMenu();
         Menu help = initMenuBarHelpMenu();
         menuBar.getMenus().addAll(file, settings, help);
-        System.out.println(file.getStyleClass());
-        System.out.println(menuBar.getStyleClass());
-//        menuBar.getStyleClass().add("menuBar");
+
     }
 
     private Menu initMenuBarFileMenu() {
@@ -70,13 +70,9 @@ public class MainWindow extends Application {
 
     private Menu initMenuBarHelpMenu() {
         Menu help = new Menu(Language.helpMenu);
-//        help.getStyleClass().add("menu");
         MenuItem tutorial = new MenuItem(Language.tutorialMenuItem);
-//        tutorial.getStyleClass().add("menuItem");
         MenuItem statistics = new MenuItem(Language.statisticsMenuItem);
-//        statistics.getStyleClass().add("menuItem");
         MenuItem about = new MenuItem(Language.aboutMenuItem);
-//        about.getStyleClass().add("menuItem");
         help.getItems().addAll(tutorial, statistics, about);
         return help;
     }

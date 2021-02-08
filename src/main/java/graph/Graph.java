@@ -83,11 +83,11 @@ public class Graph<NodesType, EdgesType> {
         for (ArrayList<EdgesType> edge : edges) edge.remove(pos);
     }
 
-    public void removeEdge(int pos1, int pos2){
+    public void removeEdge(int pos1, int pos2) {
         edges.get(pos1).set(pos2, null);
     }
 
-    public void removeArc(int pos1, int pos2){
+    public void removeArc(int pos1, int pos2) {
         edges.get(pos1).set(pos2, null);
         edges.get(pos2).set(pos1, null);
     }
