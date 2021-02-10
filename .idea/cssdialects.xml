@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CssDialectMappings">
-    <file url="file://$PROJECT_DIR$/src/main/resources/mainwindow/graphnodedefault.css" dialect="JavaFX" />
-    <file url="file://$PROJECT_DIR$/src/main/resources/mainwindow/mainwindowdefault.css" dialect="JavaFX" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/styles/graphnodedefault.css" dialect="JavaFX" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/styles/mainwindowdefault.css" dialect="JavaFX" />
   </component>
 </project>

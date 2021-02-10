@@ -8,7 +8,7 @@ public class Language {
     public static String saveMenuItem = "Save";
     public static String saveAllMenuItem = "Save all";
     public static String closeMenuItem = "Close";
-    public static String closeAllMenuItem = "closeAll";
+    public static String closeAllMenuItem = "Close all";
     public static String settingsMenu = "Settings";
     public static String mainMenuItem = "Main";
     public static String themeMenuItem = "Theme";
