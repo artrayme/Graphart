@@ -3,7 +3,8 @@ package gui;
 import gui.graphwindow.GraphWindow;
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.control.*;
+import javafx.scene.control.Tab;
+import javafx.scene.control.TabPane;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.stage.Screen;
@@ -39,3 +40,4 @@ public class MainWindow extends Application {
         launch(args);
     }
 }
+

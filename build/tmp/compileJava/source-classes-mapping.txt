@@ -1,14 +1,16 @@
-gui/graphwindow/GraphNode.java
- gui.graphwindow.GraphNode
+gui/configuration/Language.java
+ gui.configuration.Language
+gui/MainWindow.java
+ gui.MainWindow
 gui/configuration/Settings.java
  gui.configuration.Settings
 graph/Graph.java
  graph.Graph
-gui/graphwindow/GraphWindow.java
- gui.graphwindow.GraphWindow
-gui/configuration/Language.java
- gui.configuration.Language
 gui/MainWindowMenuBar.java
  gui.MainWindowMenuBar
-gui/MainWindow.java
- gui.MainWindow
+gui/graphwindow/GraphWindow.java
+ gui.graphwindow.GraphWindow
+gui/graphwindow/GraphNode.java
+ gui.graphwindow.GraphNode
+gui/EventHandlers.java
+ gui.EventHandlers
