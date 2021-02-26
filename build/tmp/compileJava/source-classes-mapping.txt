@@ -1,16 +1,28 @@
-gui/configuration/Language.java
- gui.configuration.Language
-gui/MainWindow.java
- gui.MainWindow
-gui/configuration/Settings.java
- gui.configuration.Settings
-graph/Graph.java
- graph.Graph
-gui/MainWindowMenuBar.java
- gui.MainWindowMenuBar
-gui/graphwindow/GraphWindow.java
- gui.graphwindow.GraphWindow
 gui/graphwindow/GraphNode.java
  gui.graphwindow.GraphNode
+gui/graphwindow/GraphElement.java
+ gui.graphwindow.GraphElement
+gui/configuration/DevInfo.java
+ gui.configuration.DevInfo
+gui/graphwindow/GraphArc.java
+ gui.graphwindow.GraphArc
 gui/EventHandlers.java
  gui.EventHandlers
+gui/configuration/Settings.java
+ gui.configuration.Settings
+gui/graphwindow/GraphEdge.java
+ gui.graphwindow.GraphEdge
+gui/configuration/Language.java
+ gui.configuration.Language
+graph/Graph.java
+ graph.Graph
+gui/graphwindow/GraphWindow.java
+ gui.graphwindow.GraphWindow
+gui/MainMenuBar.java
+ gui.MainMenuBar
+gui/toolspane/ToolsPane.java
+ gui.toolspane.ToolsPane
+gui/MainSplitPane.java
+ gui.MainSplitPane
+gui/MainWindow.java
+ gui.MainWindow

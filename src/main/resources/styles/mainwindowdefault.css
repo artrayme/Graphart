@@ -74,6 +74,26 @@
     -fx-border-radius: 50%;
 }
 
+/*split pane*/
+
+.split-pane {
+    -fx-background-color: #424241;
+    -fx-padding: 0;
+}
+
+.split-pane *.split-pane-divider {
+    -fx-padding: 0 1 0 1; /* 0 3 0 3 */
+    -fx-background-color: orange;
+
+}
+
+.split-pane *.horizontal-grabber {
+    -fx-padding: 5 1 5 1;
+    -fx-background-color: lightgray lightgray;
+    -fx-background-insets: 1 0 -1 0, 0;
+    -fx-shape: "M0 0 L0 0 L2 0 L2 2 L0 2 Z M0 4 L0 4 L2 4 L2 6 L0 6 Z M0 8 L0 8 L2 8 L2 10 L0 10 Z";
+}
+
 /*scroll pane*/
 
 .scroll-bar:horizontal {
@@ -117,13 +137,6 @@
     -fx-background-insets: 5 5 5;
 }
 
-/*.scroll-bar:vertical:focused {*/
-/*    -fx-background-color:*/
-/*            -fx-focus-color,*/
-/*            -fx-box-border,*/
-/*            linear-gradient(to top, derive(-fx-color,30%) 5%, derive(-fx-color,-17%) 100%);*/
-/*    -fx-background-insets: -1.4, 0, 1;*/
-/*}*/
 .scroll-pane {
     -fx-fill: #424241;
     -fx-background-color: #424241;
@@ -132,11 +145,11 @@
 }
 
 .scroll-pane > * > .scroll-bar:horizontal {
-    -fx-fill: #424241;
+    -fx-fill: transparent;
 }
 
 .scroll-pane > * > .scroll-bar:vertical {
-    -fx-fill: #424241;
+    -fx-fill: transparent;
 }
 
 

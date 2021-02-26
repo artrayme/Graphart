@@ -8,9 +8,9 @@ import javafx.scene.control.SeparatorMenuItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
-public class MainWindowMenuBar extends MenuBar {
+public class MainMenuBar extends MenuBar {
 
-    public MainWindowMenuBar() {
+    public MainMenuBar() {
         initMenuBar();
     }
 

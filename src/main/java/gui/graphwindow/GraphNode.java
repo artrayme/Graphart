@@ -5,7 +5,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.StackPane;
 import javafx.scene.shape.Circle;
 
-public class GraphNode extends StackPane {
+public class GraphNode extends StackPane implements GraphElement{
     private final Label text = new Label("NEW");
     private final Circle circle = new Circle();
     private boolean isActive;
@@ -41,4 +41,13 @@ public class GraphNode extends StackPane {
         return circle.getRadius();
     }
 
+    @Override
+    public void setText(String text) {
+        this.text.setText(text);
+    }
+
+    @Override
+    public String getText() {
+        return this.text.getText();
+    }
 }

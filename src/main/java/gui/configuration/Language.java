@@ -18,4 +18,14 @@ public class Language {
     public static String statisticsMenuItem = "Statistics";
     public static String aboutMenuItem = "About";
 
+    //ToolsPane
+    public static String newNodeButtonText = "New Node";
+    public static String newArcButtonText = "New Arc";
+    public static String newEdgeButtonText = "New Edge";
+    public static String addTextButton = "New Text";
+    public static String deleteButtonText = "Delete";
+
+
+
+
 }
