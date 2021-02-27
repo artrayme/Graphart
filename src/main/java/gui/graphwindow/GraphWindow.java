@@ -5,6 +5,8 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.input.MouseButton;
 import javafx.scene.layout.AnchorPane;
 
+import java.util.LinkedList;
+import java.util.List;
 import java.util.logging.ConsoleHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -12,8 +14,10 @@ import java.util.logging.Logger;
 public class GraphWindow extends ScrollPane {
     Logger log = Logger.getLogger(GraphWindow.class.getName());
 
-    private final Graph<String, String> graph = new Graph<>();
+    private final Graph<GraphElement, GraphElement> graph = new Graph<>();
     private final AnchorPane drawArea = new AnchorPane();
+
+    private final List<GraphElement> selectedElements = new LinkedList<>();
 
     public GraphWindow() {
         log.addHandler(new ConsoleHandler());
@@ -29,7 +33,8 @@ public class GraphWindow extends ScrollPane {
         drawArea.setOnMouseClicked(mouseEvent -> {
             if (mouseEvent.getButton().equals(MouseButton.PRIMARY)) {
                 if (mouseEvent.getClickCount() == 2) {
-                    drawArea.getChildren().addAll(new GraphNode(mouseEvent.getX(), mouseEvent.getY(), 30));
+                    GraphElement node = graph.addNode(new GraphNode(mouseEvent.getX(), mouseEvent.getY(), 30));
+                    drawArea.getChildren().addAll(node);
                 }
             }
         });

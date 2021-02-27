@@ -1,24 +1,22 @@
 package gui;
 
+import gui.graphwindow.GraphElement;
 import gui.graphwindow.GraphNode;
 import javafx.event.EventHandler;
 import javafx.scene.input.MouseEvent;
 
-public class EventHandlers {
+public class GraphElementEventHandler {
 
     public EventHandler<MouseEvent> onMousePressedEventHandler = event -> {
 
-        GraphNode node = (GraphNode) (event.getSource());
-        node.makeCircleActive();
-
+        GraphElement element = (GraphElement) (event.getSource());
+        element.setActive(!element.isActive());
     };
 
     public EventHandler<MouseEvent> onMouseDraggedEventHandler = event -> {
-        //ToDo make the offset universal
-        //(30 and 85 - bruteforce numbers)
         GraphNode node = (GraphNode) (event.getSource());
-        node.setLayoutX(event.getSceneX()-30);
-        node.setLayoutY(event.getSceneY()-85);
+        node.setX(event.getX());
+        node.setY(event.getY());
 
     };
 

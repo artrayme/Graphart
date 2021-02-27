@@ -1,7 +1,19 @@
 package gui.graphwindow;
 
-public interface GraphElement {
-    void setText(String text);
+import javafx.scene.layout.Pane;
 
-    String getText();
+public abstract class GraphElement extends Pane {
+    private boolean isActive;
+
+    public void setActive(boolean active) {
+        isActive = active;
+    }
+
+    public boolean isActive() {
+        return isActive;
+    }
+
+    abstract public void setText(String text);
+
+    abstract public String getText();
 }

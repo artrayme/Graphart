@@ -164,3 +164,26 @@
     -fx-stroke: orange;
     -fx-stroke-width: 3px;
 }
+
+/*button*/
+
+.button {
+    -fx-background-color: #424241, orange, orange, #424241;
+    -fx-text-fill: lightgray;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 1;
+    -fx-background-radius: 0, 0, 0, 0;
+    /*-fx-border-width: 1px;*/
+    -fx-font-size: 14;
+}
+
+.button:focused {
+    -fx-color: #424241;
+    -fx-background-color: #424241, lightgray, lightgray, #424241;
+    -fx-background-insets: 0 0 -1 0, 0, 1, 1;
+    -fx-background-radius: 0, 0, 0, 0;
+}
+
+
+.label {
+    -fx-text-fill: lightgray;
+}

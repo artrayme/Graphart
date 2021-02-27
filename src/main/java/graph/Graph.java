@@ -56,7 +56,7 @@ public class Graph<NodesType, EdgesType> {
     public Graph() {
     }
 
-    public void addNode(NodesType data) {
+    public NodesType addNode(NodesType data) {
         ArrayList<EdgesType> newElement = new ArrayList<EdgesType>();
         for (int i = 0; i < nodes.size(); i++) {
             newElement.add(null);
@@ -66,6 +66,7 @@ public class Graph<NodesType, EdgesType> {
         for (ArrayList<EdgesType> edge : edges) {
             edge.add(null);
         }
+        return data;
     }
 
     public void addEdge(int pos1, int pos2, EdgesType data) {
@@ -91,21 +92,6 @@ public class Graph<NodesType, EdgesType> {
         edges.get(pos1).set(pos2, null);
         edges.get(pos2).set(pos1, null);
     }
-
-    //Debug info
-//    public void print() {
-//        for (int i = 0; i < nodes.size(); i++) {
-//            System.out.print("     " + nodes.get(i));
-//        }
-//        System.out.println();
-//        for (int i = 0; i < edges.size(); i++) {
-//            System.out.print(nodes.get(i) + ":  ");
-//            for (int j = 0; j < edges.get(i).size(); j++) {
-//                System.out.print(edges.get(i).get(j) + "  ");
-//            }
-//            System.out.println();
-//        }
-//    }
 
     public ArrayList<ArrayList<EdgesType>> getEdges() {
         return edges;
