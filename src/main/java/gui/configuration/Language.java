@@ -20,6 +20,7 @@ public class Language {
 
     //SideBar
     public static String sideBarToolsButtonText = "Tools";
+    public static String sideBarGraphInformationButtonText = "Information";
     //ToolsPane
     public static String newNodeButtonText = "New Node";
     public static String newArcButtonText = "New Arc";

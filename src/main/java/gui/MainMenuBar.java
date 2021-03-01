@@ -1,12 +1,11 @@
 package gui;
 
 import gui.configuration.Language;
-import javafx.scene.control.Menu;
-import javafx.scene.control.MenuBar;
-import javafx.scene.control.MenuItem;
-import javafx.scene.control.SeparatorMenuItem;
+import gui.graphwindow.GraphWindow;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.BorderPane;
 
 public class MainMenuBar extends MenuBar {
 
@@ -40,6 +39,9 @@ public class MainMenuBar extends MenuBar {
         view.setFitWidth(24);
         view.setFitHeight(24);
         newTreeNote.setGraphic(view);
+        newTreeNote.setOnAction(event ->{
+            (((TabPane)((SplitPane)((BorderPane)getParent()).getCenter()).getItems().get(0))).getTabs().add(new Tab("newtab", new GraphWindow()));
+        });
         return newTreeNote;
     }
 
@@ -80,6 +82,10 @@ public class MainMenuBar extends MenuBar {
         view.setFitWidth(24);
         view.setFitHeight(24);
         closeTreeNote.setGraphic(view);
+        closeTreeNote.setOnAction(event ->{
+            TabPane temp = ((TabPane)((SplitPane)((BorderPane)getParent()).getCenter()).getItems().get(0));
+            temp.getTabs().remove(temp.getSelectionModel().getSelectedIndex());
+        });
         return closeTreeNote;
     }
 

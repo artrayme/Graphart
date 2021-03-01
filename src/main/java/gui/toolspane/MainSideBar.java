@@ -5,14 +5,16 @@ import gui.configuration.Language;
 import javafx.scene.Group;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.control.SplitPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.VBox;
 
 
 public class MainSideBar extends VBox {
-    private int currentPane = 0;
+    enum Panes {NonePane, ToolsPane, GraphInformationPane}
+
+    private Panes currentPane = Panes.NonePane;
     private final Button openToolPane = new Button();
+    private final Button openGraphInformationPane = new Button();
 
     public MainSideBar() {
         this.setStyle("\n" +
@@ -23,27 +25,41 @@ public class MainSideBar extends VBox {
     }
 
     private void addButtons() {
-        this.getChildren().addAll(openToolPane);
+        this.getChildren().add(openToolPane);
+        this.getChildren().add(openGraphInformationPane);
     }
 
     private void initButtons() {
         initOpenToolsButton();
+        initOpenGraphInformationButton();
     }
 
     private void initOpenToolsButton() {
         Label text = new Label(Language.sideBarToolsButtonText);
         text.setRotate(90);
         openToolPane.setGraphic(new Group(text));
-
-        openToolPane.setPrefWidth(20);
         openToolPane.setOnMouseClicked(event -> {
-            if (currentPane == 1){
+            if (currentPane == Panes.ToolsPane) {
                 ((MainSplitPane) ((BorderPane) getParent()).getCenter()).setPane(null);
-                currentPane = 0;
-            }
-            else{
+                currentPane = Panes.NonePane;
+            } else {
                 ((MainSplitPane) ((BorderPane) getParent()).getCenter()).setPane(new ToolsPane());
-                currentPane = 1;
+                currentPane = Panes.ToolsPane;
+            }
+        });
+    }
+
+    private void initOpenGraphInformationButton() {
+        Label text = new Label(Language.sideBarGraphInformationButtonText);
+        text.setRotate(90);
+        openGraphInformationPane.setGraphic(new Group(text));
+        openGraphInformationPane.setOnMouseClicked(event -> {
+            if (currentPane == Panes.GraphInformationPane) {
+                ((MainSplitPane) ((BorderPane) getParent()).getCenter()).setPane(null);
+                currentPane = Panes.NonePane;
+            } else {
+                ((MainSplitPane) ((BorderPane) getParent()).getCenter()).setPane(new GraphInformationPane());
+                currentPane = Panes.GraphInformationPane;
             }
         });
     }

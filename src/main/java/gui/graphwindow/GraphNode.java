@@ -10,15 +10,12 @@ public class GraphNode extends GraphElement{
     private final StackPane mainLayout = new StackPane();
     private final Label text = new Label("NEW");
     private final Circle circle = new Circle();
-    private double x;
-    private double y;
     private double radius;
 
     public GraphNode(double x, double y, double radius) {
-        this.x = x;
-        this.y = y;
         this.radius = radius;
         circle.setRadius(radius);
+        text.setStyle("-fx-text-fill: #424241;");
         mainLayout.getChildren().addAll(circle, text);
         mainLayout.setLayoutX(x - radius);
         mainLayout.setLayoutY(y - radius);
@@ -41,12 +38,24 @@ public class GraphNode extends GraphElement{
     private void init() {
         circle.getStyleClass().add("circle");
         GraphElementEventHandler eventHandlers = new GraphElementEventHandler();
-        setOnMouseClicked(eventHandlers.onMousePressedEventHandler);
+        setOnMouseClicked(eventHandlers.onMouseClickedEventHandler);
         setOnMouseDragged(eventHandlers.onMouseDraggedEventHandler);
     }
 
     public double getRadius(){
         return circle.getRadius();
+    }
+
+    @Override
+    public void setActive(boolean active) {
+        this.isActive = active;
+        if (isActive) makeGreen();
+        else makeOrange();
+    }
+
+    @Override
+    public boolean isActive() {
+        return isActive;
     }
 
     @Override
@@ -60,12 +69,10 @@ public class GraphNode extends GraphElement{
     }
 
     public void setX(double x) {
-        this.x = x;
         mainLayout.setLayoutX(x - radius);
     }
 
     public void setY(double y) {
-        this.y = y;
         mainLayout.setLayoutY(y - radius);
     }
 }

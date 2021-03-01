@@ -3,6 +3,16 @@ package gui.graphwindow;
 public class GraphArc extends GraphElement{
 
     @Override
+    public void setActive(boolean active) {
+
+    }
+
+    @Override
+    public boolean isActive() {
+        return false;
+    }
+
+    @Override
     public void setText(String text) {
 
     }

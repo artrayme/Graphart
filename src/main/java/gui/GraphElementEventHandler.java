@@ -7,7 +7,7 @@ import javafx.scene.input.MouseEvent;
 
 public class GraphElementEventHandler {
 
-    public EventHandler<MouseEvent> onMousePressedEventHandler = event -> {
+    public EventHandler<MouseEvent> onMouseClickedEventHandler = event -> {
 
         GraphElement element = (GraphElement) (event.getSource());
         element.setActive(!element.isActive());
