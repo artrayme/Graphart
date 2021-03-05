@@ -14,9 +14,11 @@ public class GraphElementEventHandler {
     };
 
     public EventHandler<MouseEvent> onMouseDraggedEventHandler = event -> {
-        GraphNode node = (GraphNode) (event.getSource());
-        node.setX(event.getX());
-        node.setY(event.getY());
+        if (event.getSource() instanceof GraphNode) {
+            GraphNode node = (GraphNode) (event.getSource());
+//            node.setX(event.getX());
+//            node.setY(event.getY());
+        }
 
     };
 

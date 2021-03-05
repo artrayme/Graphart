@@ -1,6 +1,7 @@
 package gui.graphwindow;
 
 import graph.Graph;
+import javafx.scene.Node;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.input.MouseButton;
 import javafx.scene.layout.AnchorPane;
@@ -33,7 +34,7 @@ public class GraphWindow extends ScrollPane {
         drawArea.setOnMouseClicked(mouseEvent -> {
             if (mouseEvent.getButton().equals(MouseButton.PRIMARY)) {
                 if (mouseEvent.getClickCount() == 2) {
-                    GraphElement node = graph.addNode(new GraphNode(mouseEvent.getX(), mouseEvent.getY(), 30));
+                    Node node = (Node) graph.addNode(new GraphNode(mouseEvent.getX(), mouseEvent.getY(), 30));
                     drawArea.getChildren().addAll(node);
                 }
             }

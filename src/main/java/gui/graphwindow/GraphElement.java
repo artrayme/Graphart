@@ -2,13 +2,11 @@ package gui.graphwindow;
 
 import javafx.scene.layout.Pane;
 
-public abstract class GraphElement extends Pane {
-    protected boolean isActive;
+public interface GraphElement {
+    void setActive(boolean active);
 
-    abstract public void setActive(boolean active);
+    boolean isActive();
+    void setText(String text);
 
-    abstract public boolean isActive();
-    abstract public void setText(String text);
-
-    abstract public String getText();
+    String getText();
 }

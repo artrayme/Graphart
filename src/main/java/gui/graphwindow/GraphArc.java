@@ -1,6 +1,6 @@
 package gui.graphwindow;
 
-public class GraphArc extends GraphElement{
+public class GraphArc implements GraphElement{
 
     @Override
     public void setActive(boolean active) {

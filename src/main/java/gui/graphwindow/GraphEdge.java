@@ -1,6 +1,6 @@
 package gui.graphwindow;
 
-public class GraphEdge extends GraphElement{
+public class GraphEdge implements GraphElement{
 
     @Override
     public void setActive(boolean active) {
