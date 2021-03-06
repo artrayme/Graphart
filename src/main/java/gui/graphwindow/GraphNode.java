@@ -73,6 +73,7 @@ public class GraphNode extends Circle implements GraphElement {
 //        text.setText("qwertyuiop");
     }
 
+//    ))))
     @Override
     public void setActive(boolean active) {
         this.isActive = active;
