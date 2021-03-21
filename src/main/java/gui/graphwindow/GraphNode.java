@@ -20,7 +20,6 @@ public class GraphNode extends Circle implements GraphElement {
         setCenterX(x);
         setCenterY(y);
         text.setFont(Font.font(FONT_FAMILY, FontPosture.ITALIC, 3 * radius / 2));
-        text.setText("qwertyuiop[");
         text.setFill(Color.GRAY);
         text.setStrokeWidth(20);
         text.xProperty().bind(this.centerXProperty().add(3 * radius / 2));
@@ -47,6 +46,10 @@ public class GraphNode extends Circle implements GraphElement {
         setOnMouseDragged(event -> {
             setCenterX(event.getX());
             setCenterY(event.getY());
+            isActive = !isActive;
+        });
+        setOnMousePressed(event -> {
+            setActive(!isActive);
         });
     }
 

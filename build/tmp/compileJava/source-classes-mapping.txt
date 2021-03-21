@@ -1,6 +1,5 @@
-gui/toolspane/MainSideBar.java
- gui.toolspane.MainSideBar
- gui.toolspane.MainSideBar$Panes
+gui/MainMenuBar.java
+ gui.MainMenuBar
 gui/configuration/Language.java
  gui.configuration.Language
 gui/graphwindow/GraphElement.java
@@ -9,24 +8,27 @@ gui/configuration/DevInfo.java
  gui.configuration.DevInfo
 gui/graphwindow/GraphArc.java
  gui.graphwindow.GraphArc
-gui/toolspane/GraphInformationPane.java
- gui.toolspane.GraphInformationPane
+gui/MainWindow.java
+ gui.MainWindow
 gui/configuration/Settings.java
  gui.configuration.Settings
 gui/graphwindow/GraphEdge.java
  gui.graphwindow.GraphEdge
-graph/Graph.java
- graph.Graph
-gui/MainWindow.java
- gui.MainWindow
-gui/MainSplitPane.java
- gui.MainSplitPane
 gui/toolspane/ToolsPane.java
  gui.toolspane.ToolsPane
-gui/MainMenuBar.java
- gui.MainMenuBar
+gui/MainSplitPane.java
+ gui.MainSplitPane
+graph/Graph.java
+ graph.Graph
 gui/graphwindow/GraphNode.java
  gui.graphwindow.GraphNode
+gui/toolspane/MainSideBar.java
+ gui.toolspane.MainSideBar
+ gui.toolspane.MainSideBar$Panes
+gui/toolspane/NodeEditPane.java
+ gui.toolspane.NodeEditPane
+gui/toolspane/GraphInformationPane.java
+ gui.toolspane.GraphInformationPane
 gui/GraphElementEventHandler.java
  gui.GraphElementEventHandler
 gui/graphwindow/GraphWindow.java
