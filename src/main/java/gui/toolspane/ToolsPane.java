@@ -9,7 +9,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.*;
 
 public class ToolsPane extends GridPane {
-    public final double buttonsSize = MainWindow.WINDOW_WIDTH/12;
+    public final double BUTTONS_SIZE = MainWindow.WINDOW_WIDTH/12;
     private final Button newNodeButton = new Button(Language.newNodeButtonText);
     private final Button newArcButton = new Button(Language.newArcButtonText);
     private final Button newEdgeButton = new Button(Language.newEdgeButtonText);
@@ -83,8 +83,8 @@ public class ToolsPane extends GridPane {
     }
 
     private void setButtonSizesInGrid(Button button){
-        button.setPrefWidth(buttonsSize);
-        button.setPrefHeight(buttonsSize);
+        button.setPrefWidth(BUTTONS_SIZE);
+        button.setPrefHeight(BUTTONS_SIZE);
         GridPane.setMargin(button, new Insets(10));
 
     }
