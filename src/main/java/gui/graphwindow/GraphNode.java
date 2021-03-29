@@ -50,6 +50,7 @@ public class GraphNode extends Circle implements GraphElement {
         });
         setOnMousePressed(event -> {
             setActive(!isActive);
+
         });
     }
 
